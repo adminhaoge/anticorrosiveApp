@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://112.124.22.238:8081/course_api/wares/detail.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <title></title>
+
+    <script src="./detail_files/jquery.min.js.下载"></script>
+    <link rel="stylesheet" type="text/css" href="./detail_files/m.css">
+
+    <script>
+
+        $(function(){
+           $("#btnBuy").click(function(){
+
+               var id = $("#txtWareId").val();
+               window.appInterface.buy(id);
+
+           });
+
+
+
+            $("#btnAddToCart").click(function(){
+
+                var id = $("#txtWareId").val();
+                window.appInterface.addToCart(id);
+
+            });
+        })
+
+
+
+
+
+        function showDetail(id){
+
+
+            $("#txtWareId").val(id);
+
+            $.ajax({
+
+                url:"get?id="+id,
+                success:function(ware){
+
+
+                    $("#ware_name").html(ware.name);
+                    $("#ware_img").attr("src",ware.imgUrl);
+                    $("#ware_price").html("￥ "+ware.price);
+                    $("#ware_sale_quantity").html(ware.sale);
+
+                }
+
+
+            })
+        }
+
+
+
+
+    </script>
+
+<style id="tsbrowser_video_independent_player_style" type="text/css">
+      [tsbrowser_force_max_size] {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0px !important;
+        top: 0px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        transform: none !important;
+      }
+      [tsbrowser_force_fixed] {
+        position: fixed !important;
+        z-index: 9999 !important;
+        background: black !important;
+      }
+      [tsbrowser_force_hidden] {
+        opacity: 0 !important;
+        z-index: 0 !important;
+      }
+      [tsbrowser_hide_scrollbar] {
+        overflow: hidden !important;
+      }
+      [tsbrowser_display_none] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+      [tsbrowser_force_show] {
+        display: black !important;
+        visibility: visible !important;
+        opacity: 0;
+      }</style></head>
+
+
+<body class="bodybg">
+
+<input type="hidden" id="txtWareId">
+
+<div class="shopdu">
+    <div id="banner_box" class="box_swipe">
+
+        <img id="ware_img" alt="">
+
+    </div>
+    <div id="ware_name" class="shopdu-xq"></div>
+</div>
+<div class="shopdu-jgxx" style="height: 73px;">
+    <div class="pdujg" id="ware_price" style="width: 55%; float: left;border-bottom: 0px;font-size: 16px;">
+
+    </div>
+    <ul class="pduxx" style="float: right;width: 44%;">
+        <li style="width: 49%;"><p>库存</p><span id="ware_quantity">23243</span></li>
+        <li style="width: 49%;"><p>总销量</p><span id="ware_sale_quantity"></span></li>
+    </ul>
+</div>
+
+<div class="productbox">
+    <ul class="ptabs">
+        <li class="active"><a href="http://112.124.22.238:8081/course_api/wares/detail.html#tab1">图文详情</a></li>
+
+    </ul>
+    <div class="ptab_container">
+        <div id="tab1" class="ptab_content block">
+
+            <p style="text-align:center;">
+                <img width="100%" src="./detail_files/rBWoX1YAyiWAHZKMAAZ1Tx2igTw952.jpg" alt="">
+            </p>
+            <p style="text-align:center;">
+                <img width="100%" src="./detail_files/rBWoYFYAyiuABULnAAW_guvk1rg314.jpg" alt="">
+            </p>
+            <p style="text-align:center;">
+                <img width="100%" src="./detail_files/rBWoYVYAyjCAcQLmAATpRsEs4cg931.jpg" alt="">
+            </p>
+            <p style="text-align:center;">
+                <img width="100%" src="./detail_files/rBWoX1YAyjSAbAKtAAb04ivLzt4592.jpg" alt="">
+            </p>
+        </div>
+    </div>
+</div>
+<div class="cart-box">
+    <div class="cart-total" id="cart-action">
+        <p class="fr mtr10"><button class="two_bnt" id="btnBuy">立即购买</button></p>
+        <p class="fr mtr10"><button class="five_bnt" id="btnAddToCart">&nbsp;&nbsp;加入购物车&nbsp;&nbsp;</button></p>
+    </div>
+</div>
+
+
+
+</body></html>

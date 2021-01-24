@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.home.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageView
+            android:id="@+id/bg_vague"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_head"
+            android:src="@drawable/tx"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:id="@+id/text_name"
+            android:textColor="@android:color/white"
+            android:text="未登录"
+            android:layout_marginTop="115dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.imitationtaobao.customview.CustomPersonal
+            android:id="@+id/setup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:show_bottomline="true"
+            app:show_leftimg="@drawable/ic_baseline_phonelink_setup_24"
+            app:show_text="设置" />
+
+        <com.example.imitationtaobao.customview.CustomPersonal
+            app:show_leftimg="@drawable/ic_baseline_access_time_24"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:show_bottomline="true"
+            app:show_text="历史记录" />
+
+        <com.example.imitationtaobao.customview.CustomPersonal
+            app:show_leftimg="@drawable/ic_baseline_system_update_alt_24"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:show_bottomline="true"
+            app:show_text="离线缓存" />
+
+        <com.example.imitationtaobao.customview.CustomPersonal
+            app:show_leftimg="@drawable/ic_baseline_system_update_24"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:show_bottomline="true"
+            app:show_text="版本更新" />
+
+        <com.example.imitationtaobao.customview.CustomPersonal
+            app:show_leftimg="@drawable/ic_baseline_input_24"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:show_bottomline="true"
+            app:show_text="关于" />
+        <TextView
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:text="版本:3.7.2V"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>

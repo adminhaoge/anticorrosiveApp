@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:id="@+id/activity_detail"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+       <EditText
+           android:textColorHint="#000000"
+           android:textColor="#000000"
+           android:id="@+id/detail_title"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:hint="标题:"
+           android:textSize="10sp"/>
+
+      <LinearLayout
+          android:id="@+id/layout_body"
+          android:background="#fffa"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+             <EditText
+                 android:textColorHint="#000000"
+                 android:textColor="#000000"
+                 android:singleLine="false"
+                 android:inputType="textMultiLine"
+                 android:id="@+id/detail_content"
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:hint="请输入内容:"
+                 android:textSize="12sp" />
+      </LinearLayout>
+
+</LinearLayout>
