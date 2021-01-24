@@ -1,0 +1,3 @@
+include ':conn'
+include ':app'
+rootProject.name = "anticorrosiveApp"
